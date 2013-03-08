@@ -64,8 +64,6 @@
 
 (global-yascroll-bar-mode 1)
 (electric-pair-mode t)
-(electric-indent-mode t)
-(electric-layout-mode t)
 (ruby-block-mode t)
 (yas-global-mode 1)
 
@@ -97,6 +95,12 @@
 (add-to-list 'auto-mode-alist '("\\.rake$"   . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$"   . ruby-mode))
 (add-to-list 'auto-mode-alist '("Guardfile$" . ruby-mode))
+
+;; ruby-mode
+(add-hook 'ruby-mode-hook
+          (lambda ()
+            (electric-indent-mode t)
+            (electric-layout-mode t)))
 
 ;; popwin
 (push '("^\*helm .+\*$" :regexp t :height 30)
