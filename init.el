@@ -96,6 +96,12 @@
 (add-to-list 'auto-mode-alist '("Gemfile$"   . ruby-mode))
 (add-to-list 'auto-mode-alist '("Guardfile$" . ruby-mode))
 
+;; coffee-mode indent
+(add-hook 'coffee-mode-hook
+          (lambda ()
+            (set (make-local-variable 'tab-width) 2)
+            (set (make-local-variable 'coffee-tab-width) 2)))
+
 ;; ruby-mode
 (add-hook 'ruby-mode-hook
           (lambda ()
