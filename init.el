@@ -46,6 +46,9 @@
 (setq direx:leaf-icon "  "
       direx:open-icon "v "
       direx:closed-icon "> ")
+(setq web-mode-tag-autocomplete-style 2)
+(setq ruby-end-insert-newline nil)
+(setq ruby-deep-indent-paren-style nil)
 
 ;; global
 (global-auto-revert-mode t)
@@ -59,13 +62,12 @@
 (set-frame-height (next-frame) 55)
 (set-frame-width (next-frame) 100)
 
-(helm-mode 1)
 (global-yascroll-bar-mode 1)
 (electric-pair-mode t)
 (electric-indent-mode t)
 (electric-layout-mode t)
 (ruby-block-mode t)
-
+(yas-global-mode 1)
 
 ;; key-binds
 (global-set-key (kbd "C-h") 'backward-delete-char)
@@ -86,12 +88,15 @@
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "M-t") 'helm-ls-git-ls)
 
+(define-key web-mode-map (kbd "C-;") 'helm-mini)
+
 ;; modes
-(add-to-list 'auto-mode-alist '("\\.erb$"       . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html?$"     . web-mode))
-(add-to-list 'auto-mode-alist '("\\.rake$"      . ruby-mode))
-(add-to-list 'auto-mode-alist '("Gemfile$"      . ruby-mode))
-(add-to-list 'auto-mode-alist '("Guardfile$"    . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.erb$"    . web-mode))
+(add-to-list 'auto-mode-alist '("\\.rhtml$"  . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?$"  . web-mode))
+(add-to-list 'auto-mode-alist '("\\.rake$"   . ruby-mode))
+(add-to-list 'auto-mode-alist '("Gemfile$"   . ruby-mode))
+(add-to-list 'auto-mode-alist '("Guardfile$" . ruby-mode))
 
 ;; popwin
 (push '("^\*helm .+\*$" :regexp t :height 30)

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: <%= %>
+# key: <%=
+# binding: C-c E
+# --
+<%= $0 %>
