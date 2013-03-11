@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: binding.remote_pry
+# key: binding
+# binding: C-c C-c C-r
+# --
+binding.remote_pry
