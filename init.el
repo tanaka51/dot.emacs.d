@@ -49,6 +49,7 @@
 (setq web-mode-tag-autocomplete-style 2)
 (setq ruby-end-insert-newline nil)
 (setq ruby-deep-indent-paren-style nil)
+(setq scss-compile-at-save nil)
 
 ;; global
 (global-auto-revert-mode t)
