@@ -68,6 +68,7 @@
 (ruby-block-mode t)
 (yas-global-mode 1)
 (global-git-gutter-mode t)
+(global-undo-tree-mode)
 
 ;; key-binds
 (global-set-key (kbd "C-h") 'backward-delete-char)
