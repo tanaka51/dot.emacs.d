@@ -21,6 +21,8 @@
 (require 'ruby-end)
 (require 'ruby-block)
 (require 'migemo)
+(require 'rvm)
+(require 'octomacs)
 
 ;; variables
 (setq-default ring-bell-function 'ignore)
@@ -169,3 +171,18 @@
 
  ;; Windows
  ((string-match "mingw" system-configuration)))
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(octomacs-workdir-alist (quote (("manyo-blog" . "~/projects/manyo-blog") ("51blog" . "~/products/tanaka51-jp.github.com"))))
+ '(ruby-insert-encoding-magic-comment nil)
+ '(ruby-use-encoding-map nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
