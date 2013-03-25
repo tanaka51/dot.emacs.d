@@ -15,7 +15,6 @@
 (require 'direx)
 (require 'direx-project)
 (require 'yascroll)
-(require 'redo+)
 (require 'web-mode)
 (require 'helm-ls-git)
 (require 'ruby-end)
@@ -62,8 +61,6 @@
 (delete-selection-mode t)
 (set-language-environment 'Japanese)
 (prefer-coding-system 'utf-8)
-(set-frame-height (next-frame) 55)
-(set-frame-width (next-frame) 100)
 
 (global-yascroll-bar-mode 1)
 (electric-pair-mode t)
@@ -118,19 +115,6 @@
       popwin:special-display-config)
 (push '(direx:direx-mode :position left :width 60 :dedicated t)
       popwin:special-display-config)
-
-;; font by @igaiga
-(let* ((size 12) ; ASCII font size [9/10/12/14/15/17/19/20/...]
-       (asciifont "Ricty") ; ASCII font
-       (jpfont "Ricty") ; Japanese font
-       (h (* size 12))
-       (fontspec (font-spec :family asciifont))
-       (jp-fontspec (font-spec :family jpfont)))
-  (set-face-attribute 'default nil :family asciifont :height h)
-  (set-fontset-font nil 'japanese-jisx0213.2004-1 jp-fontspec)
-  (set-fontset-font nil 'japanese-jisx0213-2 jp-fontspec)
-  (set-fontset-font nil 'katakana-jisx0201 jp-fontspec)
-  (set-fontset-font nil '(#x0370 . #x03FF) fontspec))
 
 ;; Migemo
 (setq migemo-command "/usr/local/bin/cmigemo")
