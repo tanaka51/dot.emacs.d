@@ -161,7 +161,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(octomacs-workdir-alist (quote (("manyo-blog" . "~/projects/manyo-blog") ("51blog" . "~/products/tanaka51-jp.github.com"))))
+ '(octomacs-workdir-alist (quote (("51blog" . "~/products/tanaka51-jp.github.com") ("manyo-blog" . "~/projects/manyo-blog"))))
  '(ruby-insert-encoding-magic-comment nil)
  '(ruby-use-encoding-map nil))
 (custom-set-faces
