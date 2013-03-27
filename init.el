@@ -98,12 +98,6 @@
 (add-to-list 'auto-mode-alist '("Gemfile$"   . ruby-mode))
 (add-to-list 'auto-mode-alist '("Guardfile$" . ruby-mode))
 
-;; coffee-mode indent
-(add-hook 'coffee-mode-hook
-          (lambda ()
-            (set (make-local-variable 'tab-width) 2)
-            (set (make-local-variable 'coffee-tab-width) 2)))
-
 ;; ruby-mode
 (add-hook 'ruby-mode-hook
           (lambda ()
@@ -162,8 +156,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(octomacs-workdir-alist (quote (("51blog" . "~/products/tanaka51-jp.github.com") ("manyo-blog" . "~/projects/manyo-blog"))))
- '(ruby-insert-encoding-magic-comment nil)
- '(ruby-use-encoding-map nil))
+ '(coffee-tab-width 2)
+ )
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
