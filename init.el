@@ -87,6 +87,7 @@
 (global-set-key (kbd "M-i") 'helm-imenu)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "M-t") 'helm-ls-git-ls)
+(global-set-key (kbd "M-g M-s") 'magit-status)
 
 (define-key web-mode-map (kbd "C-;") 'helm-mini)
 
