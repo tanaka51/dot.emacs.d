@@ -1,5 +1,8 @@
 (setq user-full-name "Koichi Tanaka")
 
+(setq load-path (append
+                 '("~/.emacs.d")
+                 load-path))
 ;; theme
 (load-theme `wombat t)
 
@@ -34,47 +37,8 @@
 (global-set-key (kbd "C-M-h") 'windmove-left)
 (global-set-key (kbd "C-M-_") 'indent-region) ; For Mac keybord
 
-(cond
- ;; Mac
- ((string-match "apple-darwin" system-configuration)
+;; Setup and execute bundle
+(load "config/bundle/base")
 
-  ;; Dictionary
-  (require 'thingatpt)
-  (defun macdict-lookup (word)
-    "Lookup word with Dictionary.app"
-    (call-process "open" nil 0 nil (concat "dict://" word)))
-
-  (defun macdict-lookup-word ()
-    "Lookup the word at point with Dictionary.app."
-    (interactive)
-    (macdict-lookup (word-at-point)))
-
-  (global-set-key (kbd "C-^") 'macdict-lookup-word)
-
-  ;; command key -> Meta key
-  (setq ns-command-modifier (quote meta))
-  (setq ns-alternate-modifier (quote super)))
-
- ;; Linux
- ((string-match "linux" system-configuration))
-
- ;; Windows
- ((string-match "mingw" system-configuration)))
-
-
-;; el-get
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-
-(unless (require 'el-get nil 'noerror)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
-    (goto-char (point-max))
-    (eval-print-last-sexp)))
-
-(add-to-list 'el-get-recipe-path "~/.emacs.d/config/el-get/recipes")
-(el-get 'sync)
-
-(add-to-list 'el-get-sources
-             '(:name bundle :type github :pkgname "tarao/bundle-el"))
-(el-get 'sync 'bundle)
+;; load os specified configuration
+(load "config/os/base")
