@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: binding.pry
-# key: binding
-# binding: C-c C-c C-b
-# --
-binding.pry
