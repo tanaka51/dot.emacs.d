@@ -74,3 +74,7 @@
 
 (add-to-list 'el-get-recipe-path "~/.emacs.d/config/el-get/recipes")
 (el-get 'sync)
+
+(add-to-list 'el-get-sources
+             '(:name bundle :type github :pkgname "tarao/bundle-el"))
+(el-get 'sync 'bundle)
