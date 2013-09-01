@@ -24,7 +24,7 @@
 
 ;; open-junk-file
 (bundle open-junk-file
-  (global-set-key (kbd "C-x j") #'helm-show-kill-ring))
+  (global-set-key (kbd "C-x j") #'open-junk-file))
 
 
 ;;;
