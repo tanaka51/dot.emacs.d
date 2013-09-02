@@ -6,6 +6,7 @@
   '(
     coffee-mode
     direx
+    evil
     git-gutter
     haml-mode
     helm
