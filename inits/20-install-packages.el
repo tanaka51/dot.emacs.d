@@ -25,6 +25,7 @@
     scss-mode
     undo-tree
     web-mode
+    wgrep
     yaml-mode
     yascroll
     ))

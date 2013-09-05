@@ -36,3 +36,7 @@
 
 ;; git-gutter
 (global-git-gutter-mode t)
+
+;; wgerp
+(require 'wgrep))
+(setq wgrep-enable-key "r")
