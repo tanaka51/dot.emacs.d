@@ -6,6 +6,7 @@
   '(
     coffee-mode
     direx
+    evil
     git-gutter
     haml-mode
     helm
@@ -24,6 +25,7 @@
     scss-mode
     undo-tree
     web-mode
+    wgrep
     yaml-mode
     yascroll
     ))
