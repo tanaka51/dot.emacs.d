@@ -8,6 +8,7 @@
     direx
     evil
     git-gutter
+    go-mode
     haml-mode
     helm
     helm-c-moccur
